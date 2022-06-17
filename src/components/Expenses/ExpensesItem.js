@@ -1,21 +1,25 @@
 import './ExpensesItem.css';
 import Expensedate from './ExpenseDate';
 import Card from '../UI/Card';
+import React from 'react';
 
 function ExpensesItem(props) {
 
+
     return (
-    <Card className='expense-item'>
-        <Expensedate date={props.date} />
-        <div className='expense-item__description'>
-            <h2>
-                {props.title}
-            </h2>
-            <div className='expense-item__price'>
-                {props.amount}
+    <li>
+        <Card className='expense-item'>
+            <Expensedate date={props.date} />
+            <div className='expense-item__description'>
+                <h2>
+                    {props.title}
+                </h2>
+                <div className='expense-item__price'>
+                    TND {props.amount}
+                </div>
             </div>
-        </div>
-    </Card> ); 
+        </Card> 
+    </li>); 
 }
 
 export default ExpensesItem;
